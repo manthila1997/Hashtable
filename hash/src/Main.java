@@ -1,3 +1,7 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -6,33 +10,29 @@ public class Main {
     public static  void main(String[] args){
         Scanner s = new Scanner(System.in);
         hash c = new hash();
-        char y;
-        int x =0;
         String data=null;
         c.hashTable();
-        String[] arr = {"mango", "apple", "banana","coffee","manthila","mango"};
+        ArrayList<String> arr = new ArrayList<String>();
+        try{
+            File file = new File("/Users/manthilabandara/Documents/manthila/Hashtable/hash/src/words.txt");
+            Scanner myReader = new Scanner(file);
+                while(myReader.hasNextLine()){
+                    String words = myReader.nextLine();
+                    arr.add(words);
+                }
+        }catch (FileNotFoundException e){
+            System.out.println("lal");
+            e.printStackTrace();
+        }
 
-       do {
-//           String a = s.next();
-           for(int i=0;i<arr.length;i++){
-             c.calHash(arr[i]);
-               c.addData(arr[i]);
+
+           for (String i : arr) {
+               c.calHash(i);
+               c.addData(i);
 
            }
 
            c.print();
-
-           System.out.println("do you want to add another value");
-            y = s.next().charAt(0);
-
-       }
-       while (y == ('y'));
-
-
-
-
-        System.out.println(x);
-
 
 
     }
