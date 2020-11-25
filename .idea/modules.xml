@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Hashtable.iml" filepath="$PROJECT_DIR$/.idea/Hashtable.iml" />
       <module fileurl="file://$PROJECT_DIR$/hash/hash.iml" filepath="$PROJECT_DIR$/hash/hash.iml" />
+      <module fileurl="file://$PROJECT_DIR$/phonebook/phonebook.iml" filepath="$PROJECT_DIR$/phonebook/phonebook.iml" />
     </modules>
   </component>
 </project>

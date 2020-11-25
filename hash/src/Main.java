@@ -21,7 +21,7 @@ public class Main {
                     arr.add(words);
                 }
         }catch (FileNotFoundException e){
-            System.out.println("lal");
+            System.out.println("file not found");
             e.printStackTrace();
         }
 
