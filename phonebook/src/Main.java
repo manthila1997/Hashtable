@@ -7,8 +7,6 @@ public class Main {
         pbook.calHash("namal", 997788);
         pbook.calHash("kasun", 997784);
         pbook.calHash("manthila", 9977);
-//        pbook.calHash("manthila", 997788);
-//        pbook.calHash("manthila", 997788);
 
 
 
