@@ -30,8 +30,9 @@ public class Main {
             c.addData(i);
 
         }
-        c.sort();
+//        c.sort();
 //        c.print();
+        System.out.println("Enter values of the companies");
         int val = s.nextInt();
         c.calHash(val);
         c.sort();

@@ -4,12 +4,12 @@ import java.util.LinkedList;
 
 public class hashTable {
 
-        private int position=0;
+
         int tableSize = 10;
         LinkedList<Integer>[] hash = new LinkedList[tableSize];
 
 
-        public void calHash(int key) {
+        public int calHash(int key) {
             int hash;
 
             int tot = 0;
@@ -17,10 +17,9 @@ public class hashTable {
 
             hash =  key/100000;
 
-                this.position = hash;
 
 
-
+        return hash;
         }
 
         public void createhashTable(){
@@ -31,7 +30,9 @@ public class hashTable {
         }
 
         public void addData(int data){
+            int position=calHash(data);
             for (int i=0; i<tableSize ; i++){
+
                 if(i==position){
                     if (hash[position].isEmpty()){
                         hash[i].addFirst(data);
@@ -63,27 +64,44 @@ public class hashTable {
             }
         }
         public void findVal(int val){
+            int position=calHash(val);
+            int x=0;
             int temp = 0;
-            System.out.println(hash[1].size());
+            int c=0;
+
             for (int i=0; i<=position;i++){
-                System.out.println("yat");
-                System.out.println(hash[i]);
                 for (int y=0; y<hash[i].size();y++){
                     int w = hash[i].get(y);
                      temp = val - w;
-                    for (int q=position;q>=0;q--){
 
-                        System.out.println(temp);
-//                        if (hash[q].contains(temp)){
-//                            System.out.println("yay");
-//                            break;
-//
-//                        }
-                    }
+                     if (temp <= 0) {
+                         c=0;
+                         continue;
+                     }else{
+                         x = calHash(temp);
+                         System.out.println(temp);
+                         if (hash[x].contains(temp)){
+
+                             c=1;
+                             break;
+                         }
+                         else {
+                             c=0;
+
+                         }
+                     }
+
+
+
+
+
 
                 }
 
             }
+
+            System.out.println(c);
+
         }
 
 }
