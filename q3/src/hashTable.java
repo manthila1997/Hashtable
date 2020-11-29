@@ -63,7 +63,7 @@ public class hashTable {
 
             }
         }
-        public void findVal(int val){
+        public int findVal(int val){
             int position=calHash(val);
             int x=0;
             int temp = 0;
@@ -79,7 +79,7 @@ public class hashTable {
                          continue;
                      }else{
                          x = calHash(temp);
-                         System.out.println(temp);
+
                          if (hash[x].contains(temp)){
 
                              c=1;
@@ -100,7 +100,7 @@ public class hashTable {
 
             }
 
-            System.out.println(c);
+            return c;
 
         }
 

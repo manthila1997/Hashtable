@@ -1,6 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -33,10 +34,21 @@ public class Main {
 //        c.sort();
 //        c.print();
         System.out.println("Enter values of the companies");
-        int val = s.nextInt();
-        c.calHash(val);
-        c.sort();
-        c.findVal(val);
+        String val = s.nextLine();
+        int ans=0;
+
+        String[] str = val.trim().split("\\s+");
+        int[] avail = new  int[str.length] ;
+        for (int i=0;i<str.length;i++){
+            int w = Integer.parseInt(str[i]);
+
+            c.calHash(w);
+            c.sort();
+           ans =  c.findVal(w);
+           avail[i] = ans;
+        }
+
+        System.out.println(Arrays.toString(avail).replace(",","").replace("[","").replace("]","").trim());
 
     }
 }
