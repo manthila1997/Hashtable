@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args){
-        System.out.println("hello");
+
         Scanner s = new Scanner(System.in);
         hashTable c = new hashTable();
         String data=null;
@@ -32,7 +32,7 @@ public class Main {
 
         }
 //        c.sort();
-//        c.print();
+//      c.print();
         System.out.println("Enter values of the companies");
         String val = s.nextLine();
         int ans=0;
@@ -42,7 +42,7 @@ public class Main {
         for (int i=0;i<str.length;i++){
             int w = Integer.parseInt(str[i]);
 
-            c.calHash(w);
+
             c.sort();
            ans =  c.findVal(w);
            avail[i] = ans;

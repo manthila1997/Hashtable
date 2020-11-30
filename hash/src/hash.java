@@ -8,7 +8,7 @@ public class hash {
 
 
     public int calHash(String key){
-        int hash=7;
+        int hash=0;
 
         int tot = 0;
         for (int i =0;i<key.length();i++){

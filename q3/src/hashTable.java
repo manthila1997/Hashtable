@@ -11,10 +11,6 @@ public class hashTable {
 
         public int calHash(int key) {
             int hash;
-
-            int tot = 0;
-
-
             hash =  key/100000;
 
 
@@ -90,16 +86,11 @@ public class hashTable {
 
                          }
                      }
-
-
-
-
-
-
+                     
                 }
 
             }
-
+            System.out.println(temp);
             return c;
 
         }
