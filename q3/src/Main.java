@@ -31,7 +31,6 @@ public class Main {
             c.addData(i);
 
         }
-//        c.sort();
 //      c.print();
         System.out.println("Enter values of the companies");
         String val = s.nextLine();
